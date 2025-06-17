@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+    <h2>FD calculator</h2>
+  
+    <input type="text" placeholder="Enter the value" id="input"><br>
+    <button onclick ="convert()">Calculator</button>
+    <div id="result">
+
+    </div>
+</div>
+    <script>
+      function  convert(){
+     const mon = Number(document.getElementById("input").value)
+     let rate = 0
+     // else if ladder more condition
+
+     // < 3 month = 5.8%
+     // 3- 6 month = 6.5 % 
+     //  7 -9 month = 6.8%
+     // > =10 month = 7 %
+     
+     if(mon<3)
+      rate = 5.8
+    else if(mon>=3 && mon<=6)
+    rate = 6.5
+    else if(mon >=7 && mon<=9)
+    rate = 6.8
+    else
+    rate=7
+
+    let res = document.getElementById("result")
+    res.innerHTML = "Your interest Rate in " + rate + "%"
+  }
+        
+    </script>
+  </body>
+</html>
